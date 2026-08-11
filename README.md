@@ -41,7 +41,3 @@ $$Ah_{eff} = Ah_{norm} \times \Phi_T \times \Phi_C$$
 ### Degradation Law
 
 $$SOH = 1 - k \times Ah_{eff}^{b}$$
-
----
-
-## 🗂️ Repository Structure
