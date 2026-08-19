@@ -92,10 +92,41 @@ Before you begin, ensure you have the following installed:
 
 ---
 
-## ⚙️ Step 1: Clone the Repository
+## Step 1: Clone the Repository
 
 Open your terminal or command prompt and run:
 
 ```bash
 git clone https://github.com/jzh672/BatteryBenchmarkingFramework.git
 cd BatteryBenchmarkingFramework
+
+---
+
+## Step 2: Install Dependencies
+
+Install all required packages using the requirements.txt file provided in the repository.
+
+```bash
+pip install --upgrade pip
+pip install -r requirements.txt
+
+---
+
+## Step 3: Prepare Your Dataset
+
+Download the BatteryLife Dataset from Zenodo: https://zenodo.org/records/17958489
+
+Note: It's recommended to use the preprocessed dataset provided in this repo as the preprocessing only adapts to BatteryLife Datasets and requires manual entries for temperature columns. But to run the preprocessing by yourself:
+
+### Update File Paths
+Before running the scripts, update the file paths in the code to point to your data location. Open the main Python scripts (e.g., preprocessing.py) and modify the input_folder and output_folder variables:
+
+```python
+# Example from preprocessing.py
+input_folder = r'path/to/your/data/raw/'   # e.g., './data/raw/'
+output_folder = r'path/to/your/data/processed/'
+
+### Run the Preprocessing
+Convert raw .pkl files into structured .csv files:
+```bash
+python src/preprocessing.py
