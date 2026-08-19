@@ -75,3 +75,27 @@ The following metrics are used to evaluate model performance:
 | `0.02 – 0.05` | Good fit |
 | `0.05 – 0.10` | Moderate fit |
 | `> 0.10` | Poor fit (investigate) |
+
+# Installation & Reproducibility Guide
+
+This guide provides instructions for setting up the environment and reproducing the results from the **Battery Aging Cross-Chemistry Benchmarking Framework**.
+
+---
+
+## 📋 Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- **Python** (Version 3.9 or higher)
+- **Git** (to clone the repository)
+- A code editor (like **VS Code**) is recommended for viewing and running the scripts.
+
+---
+
+## ⚙️ Step 1: Clone the Repository
+
+Open your terminal or command prompt and run:
+
+```bash
+git clone https://github.com/jzh672/BatteryBenchmarkingFramework.git
+cd BatteryBenchmarkingFramework
