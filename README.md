@@ -130,5 +130,14 @@ output_folder = r'path/to/your/data/processed/'
 ### Run the Preprocessing
 Convert raw .pkl files into structured .csv files:
 ```bash
-python src/preprocessing.py
+python Implementation Script/preprocessing.py
 ```
+
+The script will process all files in your input folder and save the combined data as all_data_combined.csv in your specified output folder.
+
+## Step 4: Run the Main Analysis
+Execute the main script to perform Exploratory Data Analysis (EDA), model fitting, evaluation, and generate all visualizations:
+```bash
+python Implementation Script/combined_implementation.py
+```
+This will produce the figures and results discussed in the poster and the project report.
