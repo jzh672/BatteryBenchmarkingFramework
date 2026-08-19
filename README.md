@@ -99,7 +99,7 @@ Open your terminal or command prompt and run:
 ```bash
 git clone https://github.com/jzh672/BatteryBenchmarkingFramework.git
 cd BatteryBenchmarkingFramework
-
+```
 ---
 
 ## Step 2: Install Dependencies
@@ -109,7 +109,7 @@ Install all required packages using the requirements.txt file provided in the re
 ```bash
 pip install --upgrade pip
 pip install -r requirements.txt
-
+```
 ---
 
 ## Step 3: Prepare Your Dataset
@@ -125,8 +125,10 @@ Before running the scripts, update the file paths in the code to point to your d
 # Example from preprocessing.py
 input_folder = r'path/to/your/data/raw/'   # e.g., './data/raw/'
 output_folder = r'path/to/your/data/processed/'
+```
 
 ### Run the Preprocessing
 Convert raw .pkl files into structured .csv files:
 ```bash
 python src/preprocessing.py
+```
