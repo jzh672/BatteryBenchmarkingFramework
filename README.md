@@ -66,7 +66,6 @@ The following metrics are used to evaluate model performance:
 | Metric | Description |
 |--------|-------------|
 | **95% Confidence Interval** | Range containing the true parameter value with 95% probability (from bootstrap resampling) |
-| **Relative Width** | $\frac{CI_{upper} - CI_{lower}}{mean}$ — normalized measure of parameter uncertainty; values > 0.5 indicate poor identifiability |
 
 ### Interpretation Guide
 
