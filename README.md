@@ -41,3 +41,38 @@ $$Ah_{eff} = Ah_{norm} \times \Phi_T \times \Phi_C$$
 ### Degradation Law
 
 $$SOH = 1 - k \times Ah_{eff}^{b}$$
+
+## 📊 Performance Metrics
+
+The following metrics are used to evaluate model performance:
+
+### Error Metrics
+
+| Metric | Formula | Description |
+|--------|---------|-------------|
+| **MAE** | $\frac{1}{n}\sum_{i=1}^{n} \|y_i - \hat{y}_i\|$ | Mean Absolute Error — average magnitude of prediction errors (treats all errors equally) |
+| **RMSE** | $\sqrt{\frac{1}{n}\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}$ | Root Mean Square Error — heavily penalizes large errors (outlier-sensitive) |
+
+### Battery-Specific Metrics
+
+| Metric | Description |
+|--------|-------------|
+| **$N_{80}$** | Predicted number of cycles to reach 80% State of Health (end-of-life) |
+| **$\frac{dSOH}{dAh_{eff}}$** | Intrinsic degradation rate — chemistry-level degradation per unit effective throughput |
+| **$\frac{dSOH}{dN}$** | Application-facing degradation rate — condition-dependent degradation per cycle |
+
+### Identifiability Assessment
+
+| Metric | Description |
+|--------|-------------|
+| **95% Confidence Interval** | Range containing the true parameter value with 95% probability (from bootstrap resampling) |
+| **Relative Width** | $\frac{CI_{upper} - CI_{lower}}{mean}$ — normalized measure of parameter uncertainty; values > 0.5 indicate poor identifiability |
+
+### Interpretation Guide
+
+| MAE / RMSE | Interpretation |
+|------------|----------------|
+| `< 0.02` | Excellent fit |
+| `0.02 – 0.05` | Good fit |
+| `0.05 – 0.10` | Moderate fit |
+| `> 0.10` | Poor fit (investigate) |
